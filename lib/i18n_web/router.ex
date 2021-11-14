@@ -1,6 +1,8 @@
 defmodule I18nWeb.Router do
   use I18nWeb, :router
 
+  alias I18nWeb.LocalePlug
+
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
@@ -8,6 +10,7 @@ defmodule I18nWeb.Router do
     plug :put_root_layout, {I18nWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug LocalePlug
   end
 
   pipeline :api do
