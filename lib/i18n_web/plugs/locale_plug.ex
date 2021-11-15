@@ -45,13 +45,13 @@ defmodule I18nWeb.LocalePlug do
   defp locale_from_cookies(_conn), do: nil
 
   defp determine_language_dropdown_state(conn) do
-    show_avaiable_language =
-      case conn.params["show_avaiable_locales"] do
+    show_available_language =
+      case conn.params["show_available_locales "] do
         "true" -> true
         _ -> false
       end
 
-    Conn.assign(conn, :show_avaiable_locales, show_avaiable_language)
+    Conn.assign(conn, :show_available_locales, show_available_language)
   end
 
   defp persist_locale(%Conn{cookies: %{@cookie => locale}} = conn, locale) do
@@ -59,7 +59,6 @@ defmodule I18nWeb.LocalePlug do
   end
 
   defp persist_locale(conn, locale) do
-    # Conn.put_resp_cookie(conn, @cookie, locale, max_age: @ten_days)
-    conn
+    Conn.put_resp_cookie(conn, @cookie, locale, max_age: @ten_days, sign: true)
   end
 end

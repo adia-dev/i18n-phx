@@ -14,9 +14,9 @@ msgstr ""
 #, elixir-format
 #: lib/i18n_web/templates/layout/app.html.eex:5
 msgid "Multilingualisation in Phoenix"
-msgstr ""
+msgstr "Multilinguïsation sur Phoenix"
 
 #, elixir-format
 #: lib/i18n_web/templates/page/index.html.eex:4
 msgid "Vertically centering things in css is easy!"
-msgstr ""
+msgstr "Centrer les choses verticalement en CSS, c'est facile !"

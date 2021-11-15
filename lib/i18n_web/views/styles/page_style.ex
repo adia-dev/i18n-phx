@@ -1,23 +1,23 @@
 defmodule I18nWeb.PageStyle do
   @article_classes ~w[
-    mt-5
-    text-green-500
+    bg-pink-500
     w-screen
+    h-screen
+
+  ] |> Enum.join(" ")
+
+  @heading_container_classes ~w[
     flex
     justify-center
   ] |> Enum.join(" ")
 
-  @heading_container_classes ~w[
-    dtc
-    ph-3 ph4-l
-    tc
-    v-mid
-  ] |> Enum.join(" ")
-
   @heading_classes ~w[
-    f6 f2-m f-subheadline-l
-    fw6
-    tc
+    mt-10
+    text-5xl
+    text-white
+    font-bold
+    cursor-pointer
+    hover:text-black
   ] |> Enum.join(" ")
 
   def article, do: @article_classes
